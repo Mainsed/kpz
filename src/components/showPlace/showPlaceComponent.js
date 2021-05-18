@@ -1,5 +1,5 @@
 import React from "react";
-import showPlaces from "../../db/listOfShowPlace";
+import showPlaces from "../../db/list.json";
 import './showPlaceComponent.css'
 import {
     Grid,

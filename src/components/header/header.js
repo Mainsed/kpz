@@ -11,14 +11,16 @@ const Header = () => {
     return <Grid container justify={"space-evenly"} className='header'>
         <Grid item xs={4}>
             <Typography align={"center"}>
-                <NavLink className='placeUrl homeUrl' to='/'>Home</NavLink>
+                <NavLink className='placeUrl homeUrl btn' to='/'>Home</NavLink>
             </Typography>
         </Grid>
         <Grid item xs={4}>
             <Typography align={"center"}>Пам'ятки запоріжжя</Typography>
         </Grid>
         <Grid item xs={4}>
-            <Typography align={"center"}>right</Typography>
+            <Typography align={"center"}>
+                <NavLink className='placeUrl btn' to='/place/create'>Додати місце</NavLink>
+                </Typography>
         </Grid>
     </Grid>
 }

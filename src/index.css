@@ -40,3 +40,8 @@ body {
     padding: 10px;
     background-color: #bdad00;
 }
+.btn {
+    padding: 5px;
+    background-color: #3a84bd;
+    border-radius: 5px;
+}
