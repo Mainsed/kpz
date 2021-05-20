@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core"
 
 function showPlaceComponent(props) {
-    const place = showPlaces.filter((place) => place.url === '/' + props.match.params.name)[0];
+    const place = props.places.filter((place) => place.url === '/' + props.match.params.name)[0];
     return !place ? 'Місця не існує' :
         (
             <Grid container justify={"center"}>

@@ -7,6 +7,7 @@ import {
 import axios from 'axios'
 import React, {useState } from "react"
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
+import './createPlace.css'
 
 const CreatePlace = (props) => {
     console.log('CREATE PLACE')
@@ -39,16 +40,16 @@ const CreatePlace = (props) => {
     return (
         <ValidatorForm onSubmit={onFormSubmit}>
             <Grid item xs={12}>
-                <Paper elevation={5} /*className={classes.paper}*/>
-                    <Typography align={"center"} variant={"h5"} /*className={classes.link}*/>
-                        Додавання нової пам'ятки
+                <Paper elevation={5} className='paper'>
+                    <Typography align={"center"} variant={"h5"} className='title'>
+                        Додавання нового пам'ятного місця
                     </Typography>
                     <Grid container justify={'center'}>
                         <Grid item xs={12} sm={10} lg={8}>
                             <TextValidator fullWidth
                                 variant={"outlined"}
                                 label='Назва'
-                                //className={classes.textField}
+                                className='textField'
                                 onChange={handleChange}
                                 name="name"
                                 value={name}
@@ -58,7 +59,7 @@ const CreatePlace = (props) => {
                             <TextValidator fullWidth
                                 variant={"outlined"}
                                 label='Основна картинка'
-                                //className={classes.textField}
+                                className='textField'
                                 onChange={handleChange}
                                 name="img"
                                 value={img}
@@ -67,8 +68,10 @@ const CreatePlace = (props) => {
                             />
                             <TextValidator fullWidth
                                 variant={"outlined"}
+                                multiline
+                                rows={5}
                                 label='Short text'
-                                //className={classes.textField}
+                                className='textField'
                                 onChange={handleChange}
                                 name="shortText"
                                 value={shortText}
@@ -77,8 +80,10 @@ const CreatePlace = (props) => {
                             />
                             <TextValidator fullWidth
                                 variant={"outlined"}
+                                multiline
+                                rows={5}
                                 label='Main text'
-                                //className={classes.textField}
+                                className='textField'
                                 onChange={handleChange}
                                 name="mainText"
                                 value={mainText}
@@ -88,7 +93,7 @@ const CreatePlace = (props) => {
                             <TextValidator fullWidth
                                 variant={"outlined"}
                                 label='Додадкові картинки'
-                                //className={classes.textField}
+                                className='textField'
                                 onChange={handleChange}
                                 name="addImages"
                                 value={addImages}
@@ -98,7 +103,7 @@ const CreatePlace = (props) => {
                             <TextValidator fullWidth
                                 variant={"outlined"}
                                 label='URL шлях'
-                                //className={classes.textField}
+                                className='textField'
                                 onChange={handleChange}
                                 name="url"
                                 value={url}
@@ -108,7 +113,7 @@ const CreatePlace = (props) => {
                             <TextValidator fullWidth
                                 variant={"outlined"}
                                 label='Веб-сайт'
-                                //className={classes.textField}
+                                className='textField'
                                 onChange={handleChange}
                                 name="webSite"
                                 value={webSite}
@@ -118,7 +123,7 @@ const CreatePlace = (props) => {
                             <TextValidator fullWidth
                                 variant={"outlined"}
                                 label='Адреса'
-                                //className={classes.textField}
+                                className='textField'
                                 onChange={handleChange}
                                 name="address"
                                 value={address}
@@ -128,9 +133,9 @@ const CreatePlace = (props) => {
                             <Grid container justify={"center"}>
                                 <Button variant={"contained"}
                                     type={"submit"}
-                                    //className={classes.confirmButton}
+                                    className='confirmBtn'
                                 >
-                                    Створити
+                                    Додати
                                 </Button>
                             </Grid>
                         </Grid>

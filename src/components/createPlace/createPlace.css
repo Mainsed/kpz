@@ -1,0 +1,15 @@
+.textField{
+    margin: 5px !important;
+}
+.title{
+    margin: 10px !important;
+}
+.confirmBtn{
+    padding:5px !important;
+    margin:5px !important;
+    background-color: #bdad00 !important;
+}
+.paper {
+    padding: 10px;
+    margin: 20px;
+}
