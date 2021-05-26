@@ -10,7 +10,6 @@ import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
 import './createPlace.css'
 
 const CreatePlace = (props) => {
-    console.log('CREATE PLACE')
     const [state, setState] = useState({
         validation: {
             name: '',
@@ -36,7 +35,7 @@ const CreatePlace = (props) => {
         .then((res)=>props.createPlace(state.validation))
     }
 
-    const { name, img, shortText, mainText, addImages, url, webSite, address } = state.validation;
+    const { name, img, shortText, mainText, addImages, url, web_site, address } = state.validation;
     return (
         <ValidatorForm onSubmit={onFormSubmit}>
             <Grid item xs={12}>
@@ -115,8 +114,8 @@ const CreatePlace = (props) => {
                                 label='Веб-сайт'
                                 className='textField'
                                 onChange={handleChange}
-                                name="webSite"
-                                value={webSite}
+                                name="web_site"
+                                value={web_site}
                                 validators={['required']}
                                 errorMessages={['Це поле обов\'язкове для заповнення']}
                             />

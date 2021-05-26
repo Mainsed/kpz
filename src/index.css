@@ -45,3 +45,7 @@ body {
     background-color: #3a84bd;
     border-radius: 5px;
 }
+.deleteBtn {
+    margin-left: -60px !important;
+    height: 60px;
+}

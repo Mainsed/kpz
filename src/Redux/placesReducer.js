@@ -3,9 +3,10 @@ let initialState = [];
 const placesReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'SET-PLACES':{
-            return JSON.parse(action.places)
+            return action.places
         }
         case 'CREATE-PLACE':{
+            console.log(action.data)
             return [...state, action.data];
         }
         default:

@@ -12,8 +12,15 @@ const db = () => {
             return data;
         },
         read: () => {
-            return fs.readFileSync(path).toString();
+            return JSON.parse(fs.readFileSync(path).toString());
         },
+        delete: (url) => {
+            let data = JSON.parse(fs.readFileSync(path).toString())
+            console.log(url)
+            data = data.filter(place => place.url !== url);
+            fs.writeFileSync(path, JSON.stringify(data, null, '  '))
+            return data;
+        }
 
     }
 }

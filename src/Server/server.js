@@ -19,6 +19,3 @@ app.use(function(err, req, res, next) {
 });
 
 app.listen(5000, ()=>console.log('SERVER STARTED AT 5000'))
-
-axios.get('http://localhost:5000/places')
-//axios.put('http://localhost:5000/places', {a:1123, b:2523, c: 4363})
